@@ -30,7 +30,7 @@ export class CovidGenerateKeyComponent implements OnInit {
       secondSection: '',
       secondSectionCryllic: '',
       thirdSection: '',
-      thirdSectionCryllic: ''
+      thirdSectionCryllic: '',
     };
   }
 

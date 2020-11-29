@@ -1,53 +1,87 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-8">
-      <div class="jr-border lg" style="height: auto;">
+      <div class="jr-border lg" style="height: auto">
         <div id="jor-content">
           <h3>Нэг Удаагийн Код гаргаж авах</h3>
           <div class="jr-title">Доорх зүйлсийг шалгана уу. Өвчтөн</div>
-          <table style="margin-top: 10px !important;" class="receipt">
+          <table
+            style="margin-top: 10px !important; margin-bottom: 20px"
+            class="receipt"
+          >
             <tr>
-              <td >1. COVID-19 шинжилгээний хариу эерэг гарсан.</td>
+              <td>1. COVID-19 шинжилгээний хариу эерэг гарсан.</td>
             </tr>
             <tr>
-              <td >2. Covid Tracing Mongolia апп-г утсан дээрээ суулгасан.</td>
+              <td>2. Covid Tracing Mongolia апп-г утсан дээрээ суулгасан.</td>
             </tr>
             <tr>
-              <td >3. Нэг Удаагийн Код-г апп дотроо оруулахад бэлэн.</td>
+              <td>3. Нэг Удаагийн Код-г апп дотроо оруулахад бэлэн.</td>
             </tr>
             <tr>
-              <td >4. Нэг Удаагийн Код нь 24 цаг болоод хүчингүй болно. Энэ код нь хүчингүй
-                болчихвол дахин код авах боломжгүй болно гэдгийн ойлгож байгаа.</td>
-            </tr>
-          </table>
-
-          <span style="background:#52a8d3;color:#fff;display:inline-block;text-align:left;width:95%;padding:5px;margin: 20px 0 20px 0" >Тоо, баримт статистикийг үнэн зөв байлгах үүднээс 1 өвчтөнд 1 код гаргаж өгнө үү.</span>
-
-          <button class="key-btn" (click)="showOtp()">Нэг Удаагийн Код үүсгэх</button>
-        </div>
-      </div>
-
-      <div class="jr-border lg" style="height: auto;" *ngIf="showOtpSection">
-        <br class="jor-content">
-        <h3>Өвчтөнд энэхүү кодыг өгнө үү</h3>
-        <div style="border: #0b93d5">
-          <table class="receipt">
-            <tr>
-              <td ><label style="border-bottom: 2px solid #666; font-size: 24px">{{keyClaim.firstSection}}-{{keyClaim.secondSection}}-{{keyClaim.thirdSection}}</label></td>
-            </tr>
-            <tr>
-              <td >Кодыг нэг нэгээр уншиж, өвчтөн зөв сонсоныг баталгаажуулна уу:</td>
-            </tr>
-            <tr>
-              <td style="font-weight: bold" >{{keyClaim.firstSectionCryllic}}</td>
-            </tr>
-            <tr>
-              <td style="font-weight: bold" >{{keyClaim.secondSectionCryllic}}</td>
-            </tr>
-            <tr>
-              <td style="font-weight: bold; border-bottom: 2px solid #666;" >{{keyClaim.thirdSectionCryllic}}</td>
+              <td>
+                4. Нэг Удаагийн Код нь 24 цаг болоод хүчингүй болно. Энэ код нь
+                хүчингүй болчихвол дахин код авах боломжгүй болно гэдгийн ойлгож
+                байгаа.
+              </td>
             </tr>
           </table>
+
+          <div class="alert-key">
+            <img src="assets/icons/alert.png" />
+            <span>
+              Тоо, баримт статистикийг үнэн зөв байлгах үүднээс 1 өвчтөнд 1 код
+              гаргаж өгнө үү.
+            </span>
+          </div>
+
+          <div *ngIf="showOtpSection">
+            <h3 style="margin: 0;">Өвчтөнд энэхүү кодыг өгнө үү:</h3>
+
+            <h2 style="display: inline-block;
+            border: 1px solid #333;
+            color: #000;
+            padding: 20px;">
+              {{ keyClaim.firstSection }}-{{ keyClaim.secondSection }}-{{
+                keyClaim.thirdSection
+              }}
+            </h2>
+
+            <p style="margin-top: 0; margin-bottom: 10px;">Кодыг нэг нэгээр уншиж, өвчтөн зөв сонсоныг баталгаажуулна уу:</p>
+            <div style="border: 1px solid #333; display: inline-block;">
+              <table style="margin: 0;">
+                <tr>
+                  <td style="font-weight: bold; font-size: 28px; color: #333;">
+                    {{ keyClaim.firstSectionCryllic }}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;  font-size: 28px; color: #333;">
+                    {{ keyClaim.secondSectionCryllic }}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold; font-size: 28px; color: #333;">
+                    {{ keyClaim.thirdSectionCryllic }}
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div *ngIf="showOtpSection; else otpNotExist">
+            <button class="key-btn" (click)="showOtp()">
+              Дараагын өвчтөнд нэг удаагийн код үүсгэх
+            </button>
+          </div>
+          
+          <ng-template #otpNotExist>
+            <button class="key-btn" (click)="showOtp()">
+              Нэг Удаагийн Код үүсгэх
+            </button>
+          </ng-template>
+
+          
         </div>
       </div>
     </div>

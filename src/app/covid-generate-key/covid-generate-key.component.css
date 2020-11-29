@@ -1,0 +1,101 @@
+/*.jr-border {*/
+/*  width: 100%;*/
+/*  background: #fff;*/
+/*  border: 0px solid #ccc;*/
+/*  min-height: 100px;*/
+/*  padding: 15px;*/
+/*  margin-bottom: 15px;*/
+/*  float: left;*/
+/*  background-color: #fff;*/
+/*  background-clip: initial;*/
+/*  border: 1px solid #eef2f7;*/
+/*  border-radius: .25rem;*/
+/*  box-shadow: 0 0 35px 0 rgba(154,161,171,.15);*/
+/*}*/
+
+/*.jr-border.lg {*/
+/*  float: left;*/
+/*}*/
+
+/*#jor-content {*/
+/*  width: 100%;*/
+/*  padding: 20px;*/
+/*  position: relative;*/
+/*}*/
+
+/*#jor-head {*/
+/*  position: absolute;*/
+/*  width: 100%;*/
+/*  z-index: -1;*/
+/*  margin-top: -15px;*/
+/*  height: 80px;*/
+/*}*/
+
+/*#jor-content h5 {*/
+/*  width: 100%;*/
+/*  font-size: 15px;*/
+/*  font-weight: bold;*/
+/*  text-align: center;*/
+/*}*/
+
+
+/*table.receipt {*/
+/*  width: 100%;*/
+/*}*/
+
+/*table.receipt thead td, table.receipt thead th {*/
+/*  font-size: 12px;*/
+/*}*/
+
+/*table.receipt tbody td {*/
+/*  font-size: 10px;*/
+/*}*/
+
+/*table.receipt tfoot td {*/
+/*  font-size: 10px;*/
+/*}*/
+
+/*table.nd {*/
+/*  width: auto;*/
+/*}*/
+
+/*table.nd td, table.nd th{*/
+/*  border: 1px solid #000000;*/
+/*  border-collapse: collapse;*/
+/*  padding: 5px;*/
+/*  text-align: center;*/
+/*  background: #ffffff;*/
+/*}*/
+
+/*table.nd thead td, table.nd thead th {*/
+/*  background: #ddebf7 !important;*/
+/*  font-weight:bold;*/
+/*}*/
+
+/*table.nd tr.foot, table.nd tr.foot td {*/
+/*  background: #ddebf7 !important;*/
+/*  font-weight:bold;*/
+/*}*/
+
+/*table.nd tfoot {*/
+/*  background: #ddebf7;*/
+/*  font-weight:bold;*/
+/*}*/
+
+/*.overlay {*/
+/*  width: 100%;*/
+/*  height: 600px;*/
+/*  overflow: auto;*/
+/*  background: #ddd;*/
+/*  border: 1px solid #888;*/
+/*  padding: 25px 25px;*/
+/*}*/
+
+/*.paver {*/
+/*  cursor: pointer;background: #f1f1f1;*/
+/*}*/
+
+/*.paver:hover {*/
+/*  background: #eaeaea;*/
+/*  box-shadow: 0 0 35px 0 rgba(154,161,171,.15);*/
+/*}*/

@@ -1,0 +1,11 @@
+{
+  "/rest/covid-backend-service": {
+    "target": "https://key-submission.covidmongolia.app",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/rest/covid-backend-service": ""
+    }
+  }
+}

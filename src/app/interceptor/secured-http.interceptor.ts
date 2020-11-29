@@ -10,7 +10,7 @@ import {Observable} from 'rxjs';
 @Injectable()
 export class SecuredHttpInterceptor implements HttpInterceptor {
 
-    token = 'VMn9C4rMHquRDepnANu7hZuAnDsvqdZs';
+    token = 'VMn9C4rMHquRDepnANu7hZuAnDsvqdZs'; // REPLACE THIS TOKEN WHEN DEPLOYING TO PROUDCTION
     constructor(private router: Router, private loader: NgxSpinnerService){
 
     }

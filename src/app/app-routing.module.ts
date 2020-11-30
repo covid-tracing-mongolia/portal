@@ -5,7 +5,7 @@ import {CovidGenerateKeyComponent} from './covid-generate-key/covid-generate-key
 
 const routes: Routes = [
   { path: '', redirectTo: '/covid', pathMatch: 'full' },
-  { path: 'covid', component: CovidGenerateKeyComponent }
+  { path: 'covid', component: CovidGenerateKeyComponent },
 ];
 
 @NgModule({

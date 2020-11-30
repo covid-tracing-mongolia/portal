@@ -3,39 +3,9 @@
     <div class="col-sm-8">
       <div class="jr-border lg" style="height: auto">
         <div id="jor-content">
-          <h3>Нэг Удаагийн Код гаргаж авах</h3>
-          <div class="jr-title">Доорх зүйлсийг шалгана уу. Өвчтөн</div>
-          <table
-            style="margin-top: 10px !important; margin-bottom: 20px"
-            class="receipt"
-          >
-            <tr>
-              <td>1. COVID-19 шинжилгээний хариу эерэг гарсан.</td>
-            </tr>
-            <tr>
-              <td>2. Covid Tracing Mongolia апп-г утсан дээрээ суулгасан.</td>
-            </tr>
-            <tr>
-              <td>3. Нэг Удаагийн Код-г апп дотроо оруулахад бэлэн.</td>
-            </tr>
-            <tr>
-              <td>
-                4. Нэг Удаагийн Код нь 24 цаг болоод хүчингүй болно. Энэ код нь
-                хүчингүй болчихвол дахин код авах боломжгүй болно гэдгийн ойлгож
-                байгаа.
-              </td>
-            </tr>
-          </table>
+          
 
-          <div class="alert-key">
-            <img src="assets/icons/alert.png" />
-            <span>
-              Тоо, баримт статистикийг үнэн зөв байлгах үүднээс 1 өвчтөнд 1 код
-              гаргаж өгнө үү.
-            </span>
-          </div>
-
-          <div *ngIf="showOtpSection">
+          <div *ngIf="showOtpSection; else otpNotExist">
             <h3 style="margin: 0;">Өвчтөнд энэхүү кодыг өгнө үү:</h3>
 
             <h2 style="display: inline-block;
@@ -67,15 +37,48 @@
                 </tr>
               </table>
             </div>
+
+            <div style="margin-top: 20px;">
+              <button class="key-btn" (click)="clearOtp()">
+                Дараагын өвчтөнд нэг удаагийн код үүсгэх
+              </button>
+            </div>
           </div>
 
-          <div *ngIf="showOtpSection; else otpNotExist">
-            <button class="key-btn" (click)="showOtp()">
-              Дараагын өвчтөнд нэг удаагийн код үүсгэх
-            </button>
-          </div>
           
           <ng-template #otpNotExist>
+            <h3>Нэг Удаагийн Код гаргаж авах</h3>
+          <div class="jr-title">Доорх зүйлсийг шалгана уу. Өвчтөн</div>
+          <table
+            style="margin-top: 10px !important; margin-bottom: 20px"
+            class="receipt"
+          >
+            <tr>
+              <td>1. COVID-19 шинжилгээний хариу эерэг гарсан.</td>
+            </tr>
+            <tr>
+              <td>2. Covid Tracing Mongolia апп-г утсан дээрээ суулгасан.</td>
+            </tr>
+            <tr>
+              <td>3. Нэг Удаагийн Код-г апп дотроо оруулахад бэлэн.</td>
+            </tr>
+            <tr>
+              <td>
+                4. Нэг Удаагийн Код нь 24 цаг болоод хүчингүй болно. Энэ код нь
+                хүчингүй болчихвол дахин код авах боломжгүй болно гэдгийн ойлгож
+                байгаа.
+              </td>
+            </tr>
+          </table>
+
+          <div class="alert-key">
+            <img src="assets/icons/alert.png" />
+            <span>
+              Тоо, баримт статистикийг үнэн зөв байлгах үүднээс 1 өвчтөнд 1 код
+              гаргаж өгнө үү.
+            </span>
+          </div>
+
             <button class="key-btn" (click)="showOtp()">
               Нэг Удаагийн Код үүсгэх
             </button>

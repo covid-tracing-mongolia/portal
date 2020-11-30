@@ -40,6 +40,21 @@ export class CovidGenerateKeyComponent implements OnInit {
     this.thirdSection = '';
     this.generateNewKey();
   }
+  
+  clearOtp() {
+    this.firstSection = '';
+    this.secondSection = '';
+    this.thirdSection = '';
+    this.keyClaim = {
+      firstSection: '',
+      firstSectionCryllic: '',
+      secondSection: '',
+      secondSectionCryllic: '',
+      thirdSection: '',
+      thirdSectionCryllic: '',
+    };
+    this.showOtpSection = false;
+  }
 
   setAlphabet(keyClaim: any) {
     const claimLen = keyClaim.replace(' ', '').length;
